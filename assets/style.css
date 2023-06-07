@@ -1,0 +1,63 @@
+body {
+  width: 80%;
+  margin: 0 auto;
+  background-color: rgb(95, 116, 112);
+}
+h1 {
+  text-align: center;
+  color: rgb(204, 88, 3);
+  font-size: 2.5rem;
+  text-shadow: -1px 1px 0 #000, 1px 1px 0 #000, 1px -1px 0 #000,
+    -1px -1px 0 #000;
+}
+form {
+  text-align: center;
+}
+label {
+  display: none;
+}
+#new-task,
+#mod-task {
+  height: 25px;
+  width: 12rem;
+  background-color: rgb(204, 88, 3);
+  padding: 1%;
+  font-size: 1.5rem;
+}
+::placeholder {
+  color: black;
+  text-align: center;
+  font-size: 1.5rem;
+}
+#submit-button,
+#modify-button {
+  background-color: rgb(204, 88, 3);
+  font-size: 1.5em;
+  padding: 1%;
+  border-radius: 15px;
+  margin-top: 1%;
+}
+.completed {
+  text-decoration: line-through;
+  color: rgb(106, 102, 163);
+}
+ul {
+  list-style: none;
+}
+li {
+  background-color: rgb(255, 201, 113);
+  padding: 2%;
+  border-radius: 15px;
+  text-align: center;
+  margin: 1% auto;
+  font-size: 2em;
+}
+.fa-trash-alt {
+  color: red;
+}
+.hidden {
+  display: none;
+}
+.visible {
+  display: block;
+}
