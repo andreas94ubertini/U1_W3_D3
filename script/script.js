@@ -23,24 +23,30 @@ form1.addEventListener("submit", (e) => {
   allDeleteTheButons.forEach((button) => {
     button.addEventListener("click", (e) => {
       const taskToRemove = e.target.parentElement
+      console.log(taskToRemove)
       taskToRemove.remove()
     })
   })
-  //   let AllmodifyButtons = document.querySelectorAll(".fa-pencil-alt")
-  //   AllmodifyButtons.forEach((button) => {
-  //     button.addEventListener("click", (e) => {
-  //       console.log("ciao")
-  //       taskToreplace = e.target.parentElement
-  //       form2.classList.add("visible")
-  //       form1.classList.remove("visible")
-  //       form1.classList.add("hidden")
-  //     })
-  //   })
+  let AllmodifyButtons = document.querySelectorAll(".fa-pencil-alt")
+  AllmodifyButtons.forEach((button) => {
+    button.addEventListener("click", (e) => {
+      taskToreplace = e.target.parentElement
+      form2.classList.add("visible")
+      form1.classList.remove("visible")
+      form1.classList.add("hidden")
+    })
+  })
+  form2.addEventListener("submit", (e) => {
+    e.preventDefault()
+    let stringToPass = document.getElementById("mod-task").value
+    console.log(stringToPass, "sono to replace")
+    taskToreplace.innerHTML = `
+  ${stringToPass} &emsp; <i class="fas fa-trash-alt"></i> <i class="fas fa-pencil-alt"></i>
+  `
+    taskToreplace.classList.remove("completed")
+    form2.classList.remove("visible")
+    form1.classList.add("visible")
+    form2.classList.add("hidden")
+  })
+  form2.reset()
 })
-// form2.addEventListener("submit", (e) => {
-//   e.preventDefault()
-//   taskToAdd.replaceWith(stringToPass)
-//   form2.classList.remove("visible")
-//   form1.classList.add("visible")
-//   form2.classList.add("hidden")
-// })
